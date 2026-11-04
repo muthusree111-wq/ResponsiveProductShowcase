@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaTech | Product Showcase</title>
+
+    <style>
+        :root {
+            --primary: #7c5cff;
+            --secondary: #a78bfa;
+            --background: #0b1020;
+            --card: #151d32;
+            --text: #ffffff;
+            --muted: #a5aec4;
+            --accent: #22d3ee;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: var(--card);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Main section */
+        main {
+            padding: 65px 8%;
+        }
+
+        .product-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            background: var(--card);
+            padding: 45px;
+            border-radius: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product-image {
+            flex: 1 1 350px;
+            text-align: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 15px;
+        }
+
+        .product-details {
+            flex: 1 1 350px;
+        }
+
+        .product-details h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            color: var(--accent);
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .description {
+            color: var(--muted);
+            margin: 20px 0;
+        }
+
+        .features {
+            margin: 20px 0;
+            list-style-position: inside;
+            color: var(--muted);
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            color: var(--secondary);
+            margin: 20px 0;
+        }
+
+        /* Product button */
+        .buy-button {
+            background: var(--primary);
+            color: white;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background: var(--accent);
+            color: var(--background);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(34, 211, 238, 0.25);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: var(--card);
+            color: var(--muted);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            main {
+                padding: 30px 5%;
+            }
+
+            .product-container {
+                flex-direction: column;
+                padding: 25px;
+                gap: 30px;
+            }
+
+            .product-details {
+                text-align: center;
+            }
+
+            .product-details h1 {
+                font-size: 28px;
+            }
+
+            .features {
+                list-style: none;
+            }
+        }
+
+        @media (max-width: 400px) {
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .product-details h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">NovaTech.</div>
+
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#product">Products</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="product-container" id="product">
+
+            <div class="product-image">
+                <img
+                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800"
+                    alt="Premium wireless headphones"
+                >
+            </div>
+
+            <div class="product-details">
+                <span class="tag">NEW GENERATION GADGET</span>
+
+                <h1>NovaSound Pro</h1>
+
+                <p class="description">
+                    Experience exceptional sound quality with NovaSound Pro.
+                    Designed for music lovers, professionals and everyday use.
+                    Enjoy powerful audio with a comfortable wireless design.
+                </p>
+
+                <ul class="features" id="features">
+                    <li>Advanced Noise Cancellation</li>
+                    <li>40 Hours Battery Life</li>
+                    <li>Bluetooth 5.3 Connectivity</li>
+                    <li>Premium Lightweight Design</li>
+                </ul>
+
+                <p class="price">₹4,999</p>
+
+                <button class="buy-button" type="button">
+                    Explore Product
+                </button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>© 2026 NovaTech. All Rights Reserved.</p>
+        <p>Innovation Meets Technology.</p>
+    </footer>
+
+</body>
+</html>
